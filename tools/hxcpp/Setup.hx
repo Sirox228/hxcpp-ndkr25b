@@ -376,7 +376,7 @@ class Setup
       for (i in 5...ndkVersion+1)
          defines.set("NDKV" + i + "+", "1");
 
-      var arm_type = 'arm-linux-androideabi';
+      var arm_type = 'armv7a-linux-androideabi';
       var arm_64 = defines.exists('HXCPP_ARM64');
       if(arm_64) arm_type = 'aarch64-linux-android';
 
