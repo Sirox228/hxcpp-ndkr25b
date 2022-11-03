@@ -87,7 +87,8 @@
 <linker id="dll" exe="clang++" >
 
   <exe name="clang++" />
-  <flag value ="-shared" />
+  <flag value="-shared" unlese="STATICCOMPILE" />
+  <flag value="-static" if="STATICCOMPILE" />
   <flag value="--target=${ABITRIPLE}${PLATFORM_NUMBER}" />
 
   <flag value ="-static-libstdc++" />
